@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import Default from '../styles/Default'
 
-function evenOrOdd(number) {
+function evenOdd(number) {
   if (number % 2 == 0) {
     return <Text style={Default.ex}>Pair</Text>
   } else {
@@ -12,6 +12,6 @@ function evenOrOdd(number) {
 
 export default props => 
   <View>
-    {evenOrOdd(props.number)}
+    {evenOdd(props.number)}
     {/* { {props.number % 2 == 0 ? <Text style={Default.ex}>Even</Text> : <Text style={Default.ex}>Odd</Text>} } */}
   </View>
