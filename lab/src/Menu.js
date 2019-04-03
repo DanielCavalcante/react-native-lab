@@ -4,8 +4,12 @@ import { createDrawerNavigator } from 'react-navigation'
 import Simple from './components/Simple'
 import { Inverter } from './components/Multi'
 import EvenOdd from './components/EvenOdd'
+import Count from './components/Count'
 
 export default createDrawerNavigator({
+  Count: {
+    screen: () => <Count number={8} />
+  },
   Simple: {
     screen: () => <Simple text='Simple!' />,
     navigationOptions: { title: 'Simple' }
