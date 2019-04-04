@@ -4,7 +4,8 @@
 2. Download do Android Studio
 3. Adicionar a variável ANDROID_HOME nas variáveis de ambiente do windows
 4. Editar o path adicionando os seguintes comandos:
-    ```%$ANDROID_HOME%\emulator
+    ```
+        %$ANDROID_HOME%\emulator
         %$ANDROID_HOME%\tools
         %$ANDROID_HOME%\tools/bin
         %$ANDROID_HOME%\platform-tools
