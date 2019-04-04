@@ -5,17 +5,19 @@
 3. Adicionar a variável ANDROID_HOME nas variáveis de ambiente do windows
 4. Editar o path adicionando os seguintes comandos:
     ```
-        %$ANDROID_HOME%\emulator
-        %$ANDROID_HOME%\tools
-        %$ANDROID_HOME%\tools\bin
-        %$ANDROID_HOME%\platform-tools
+        %ANDROID_HOME%\emulator
+        %ANDROID_HOME%\tools
+        %ANDROID_HOME%\tools\bin
+        %ANDROID_HOME%\platform-tools
     ```
 
-5. Executar o comando da licença: sdkmanager —licenses e dar yes pra tudo
+5. Executar o comando da licença: sdkmanager --licenses e dar yes pra tudo
 
 Comandos para testar:
-$ avd —version
-$ emulator -version
+```
+    $ avd —version
+    $ emulator -version
+```
 
 Listar emuladores:
 $ emulator -list-avds
