@@ -8,7 +8,7 @@ import Count from './components/Count'
 
 export default createDrawerNavigator({
   Count: {
-    screen: () => <Count number={8} />
+    screen: () => <Count />
   },
   Simple: {
     screen: () => <Simple text='Simple!' />,
