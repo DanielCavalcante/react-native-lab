@@ -7,8 +7,12 @@ import EvenOdd from './components/EvenOdd'
 import Count from './components/Count'
 import Platform from './components/Platform'
 import PropsValidate from './components/PropsValidate'
+import Event from './components/Event'
 
 export default createDrawerNavigator({
+  Event: {
+    screen: Event
+  },
   PropsValidate: {
     screen: () => <PropsValidate label='HB20 ' age={18} />
   },
