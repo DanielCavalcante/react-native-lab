@@ -8,8 +8,12 @@ import Count from './components/Count'
 import Platform from './components/Platform'
 import PropsValidate from './components/PropsValidate'
 import Event from './components/Event'
+import { GrandFather } from './components/DirectCommunication'
 
 export default createDrawerNavigator({
+  GrandFather: {
+    screen: () => <GrandFather name='Ronaldo' lastName='Nazario' />
+  },
   Event: {
     screen: Event
   },
