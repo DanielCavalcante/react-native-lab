@@ -6,8 +6,12 @@ import { Inverter } from './components/Multi'
 import EvenOdd from './components/EvenOdd'
 import Count from './components/Count'
 import Platform from './components/Platform'
+import PropsValidate from './components/PropsValidate'
 
 export default createDrawerNavigator({
+  PropsValidate: {
+    screen: () => <PropsValidate label='HB20 ' age={18} />
+  },
   Platform: {
     screen: () => <Platform />
   },
