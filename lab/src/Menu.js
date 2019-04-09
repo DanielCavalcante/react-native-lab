@@ -5,8 +5,12 @@ import Simple from './components/Simple'
 import { Inverter } from './components/Multi'
 import EvenOdd from './components/EvenOdd'
 import Count from './components/Count'
+import Platform from './components/Platform'
 
 export default createDrawerNavigator({
+  Platform: {
+    screen: () => <Platform />
+  },
   Count: {
     screen: () => <Count />
   },
