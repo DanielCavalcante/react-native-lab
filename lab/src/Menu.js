@@ -11,8 +11,13 @@ import Event from './components/Event'
 import { GrandFather } from './components/DirectCommunication'
 import { SyncedText } from './components/Input'
 import FlexList from './components/FlexList'
+import Flex from './components/Flex'
 
 export default createDrawerNavigator({
+  Flex: {
+    screen: Flex,
+    navigationOptions: { title: 'Circles' }
+  },
   FlexList: {
     screen: FlexList,
     navigationOptions: { title: 'Students' }
