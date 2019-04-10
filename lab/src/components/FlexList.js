@@ -28,7 +28,9 @@ const row = {
   backgroundColor: '#DDD',
   borderWidth: 0.5,
   borderColor: '#222',
-  alignItems: 'center'
+  alignItems: 'center',
+  flexDirection: 'row',
+  justifyContent: 'space-between'
 }
 
 export const Student = props => 
