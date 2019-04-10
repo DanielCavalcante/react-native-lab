@@ -10,11 +10,16 @@ import PropsValidate from './components/PropsValidate'
 import Event from './components/Event'
 import { GrandFather } from './components/DirectCommunication'
 import { SyncedText } from './components/Input'
+import FlexList from './components/FlexList'
 
 export default createDrawerNavigator({
-  SyncedText: {
-    screen: SyncedText
+  FlexList: {
+    screen: FlexList,
+    navigationOptions: { title: 'Students' }
   },
+  // SyncedText: {
+  //   screen: SyncedText
+  // },
   GrandFather: {
     screen: () => <GrandFather name='Ronaldo' lastName='Nazario' />
   },
