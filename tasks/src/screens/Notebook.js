@@ -4,6 +4,7 @@ import moment from 'moment'
 import 'moment/locale/pt-br'
 import todayImage from '../../assets/imgs/today.jpg'
 import commonStyles from '../commonStyle'
+import Task from '../components/Task'
 
 export default class Notebook extends Component {
   render() {
@@ -18,9 +19,7 @@ export default class Notebook extends Component {
           </View>
         </ImageBackground>
         <View style={styles.tasksContainer}>
-          <Text>Task 1</Text>
-          <Text>Task 2</Text>
-          <Text>Task 3</Text>
+          <Task desc='Task pending' estimateAt={new Data()} doneAt={null}></Task>
         </View>
       </View>
     )
