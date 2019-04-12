@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, FlatList } from 'react-native'
 import moment from 'moment'
 import 'moment/locale/pt-br'
 import todayImage from '../../assets/imgs/today.jpg'
@@ -7,6 +7,14 @@ import commonStyles from '../commonStyle'
 import Task from '../components/Task'
 
 export default class Notebook extends Component {
+
+  state = {
+    tasks: [
+      { id: Math.random(), desc: 'Varei', estimateAt: null, doneAt: new Data() },
+      { id: Math.random(), desc: 'Xuxinha', estimateAt: null, doneAt: null }
+    ]
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -19,7 +27,7 @@ export default class Notebook extends Component {
           </View>
         </ImageBackground>
         <View style={styles.tasksContainer}>
-          <Task desc='Task pending' estimateAt={new Data()} doneAt={null}></Task>
+          <FlatList data={this.state.tasks} keyExtractor={item => `${item.id}`} renderItem={({item}) => <Task {...item} />} />
         </View>
       </View>
     )
