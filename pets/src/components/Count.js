@@ -6,7 +6,7 @@ export default class Count extends Component {
   state = {
     number: 0
   }
-
+  
   increment = () => {
     this.setState({number: this.state.number + 1})
   }
