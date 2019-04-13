@@ -12,6 +12,7 @@ import { GrandFather } from './components/DirectCommunication'
 import { SyncedText } from './components/Input'
 import FlexList from './components/FlexList'
 import Flex from './components/Flex'
+import Xuxinha from './components/Xuxinha'
 
 export default createDrawerNavigator({
   Flex: {
@@ -40,9 +41,8 @@ export default createDrawerNavigator({
   Count: {
     screen: () => <Count />
   },
-  Simple: {
-    screen: () => <Simple text='Simple!' />,
-    navigationOptions: { title: 'Simple' }
+  Xuxinha: {
+    screen: () => <Xuxinha name="Xuxinha" age={25} />
   },
   Inverter: {
     screen: () => <Inverter text='subinoonibus'></Inverter>
