@@ -3,5 +3,5 @@ import { View, Text } from 'react-native'
 
 export default props =>
     <View>
-        <Text>Hello</Text>
+        <Text style={{fontSize: 40}}>Hello</Text>
     </View>

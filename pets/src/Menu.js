@@ -2,8 +2,16 @@ import React from 'react'
 import { createDrawerNavigator } from 'react-navigation'
 
 import Hello from './components/Hello'
+import Plataforma from './components/Plataforma'
+import Count from './components/Count'
 
 export default createDrawerNavigator({
+    Count: {
+      screen: () => <Count />
+    },
+    Plataforma: {
+      screen: () => <Plataforma />
+    },
     Hello: {
       screen: () => <Hello />
     }
