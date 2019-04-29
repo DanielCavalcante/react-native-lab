@@ -7,7 +7,8 @@ import {
   DatePickerIOS,
   StyleSheet,
   TouchableWithoutFeedback,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native'
 import moment from 'moment'
 import commonStyle from '../commonStyle'
@@ -18,6 +19,10 @@ export default class AddTask extends Component {
   state = { ...initialState}
 
   save = () => {
+    if (!this.state.desc.trim()) {
+      Alert.alert('Invalid data!', 'Fill the description input')
+      return
+    }
     const data = { ...this.state }
     this.props.onSave(data)
     this.setState({ ...initialState })
