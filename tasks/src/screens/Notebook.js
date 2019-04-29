@@ -53,7 +53,7 @@ export default class Notebook extends Component {
       }
       return task
     })
-    this.setState({ tasks })
+    this.setState({ tasks }, this.filterTasks)
   }
 
   render() {
