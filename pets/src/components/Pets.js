@@ -22,7 +22,7 @@ export default class Pets extends Component {
     return (
       <View>
         <Text>Pets</Text>
-        {this.state.pets.map(pet => {return <Text>{pet.name}</Text>})}
+        {this.state.pets.map(pet => {return <Text key={pet._id}>{pet.name}</Text>})}
       </View>
     )
   }
