@@ -5,8 +5,12 @@ import Hello from './components/Hello'
 import Plataforma from './components/Plataforma'
 import Count from './components/Count'
 import GrandFather from './components/ComunicacaoDireta'
+import Pets from './components/Pets'
 
 export default createDrawerNavigator({
+    Pets: {
+      screen: Pets
+    },
     GrandFather: {
       screen: () => <GrandFather name='Ronaldo' lastName='Nazario' />
     },
