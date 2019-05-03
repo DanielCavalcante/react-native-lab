@@ -7,7 +7,8 @@ import {
   FlatList, 
   TouchableOpacity,
   Platform,
-  Alert
+  Alert,
+  AsyncStorage
 } from 'react-native'
 import moment from 'moment'
 import 'moment/locale/pt-br'
@@ -21,10 +22,7 @@ import AddTask from './AddTask'
 export default class Notebook extends Component {
 
   state = {
-    tasks: [
-      { id: 1, desc: 'Varei', estimateAt: null, doneAt: new Date() },
-      { id: 2, desc: 'Xuxinha', estimateAt: new Date(), doneAt: null }
-    ],
+    tasks: [],
     visibleTasks: [],
     showDoneTasks: true,
     showAddTask: false
@@ -55,14 +53,17 @@ export default class Notebook extends Component {
       visibleTasks = this.state.tasks.filter(pending)
     }
     this.setState({ visibleTasks })
+    AsyncStorage.setItem('tasks', JSON.stringify(this.state.tasks))
   }
 
   toggleFilter = () => {
     this.setState({ showDoneTasks: !this.state.showDoneTasks }, this.filterTasks)  
   }
 
-  componentDidMount = () => {
-    this.filterTasks()
+  componentDidMount = async () => {
+    const data = await AsyncStorage.getItem('tasks')
+    const tasks = JSON.parse(data) || []
+    this.setState({ tasks }, this.filterTasks())
   }
 
   toggleTask = id => {
